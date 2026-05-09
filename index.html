@@ -15,7 +15,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .nav-logo span{color:var(--accent)}
 .nav-links{display:flex;gap:1.75rem;list-style:none;align-items:center}
 .nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.04em;color:var(--muted);text-decoration:none;transition:color 0.2s}
-.nav-links a:hover{color:var(--navy)}
+.nav-links a:hover{color:var(--navy)}.nav-links a.active{color:var(--navy);font-weight:600}
 .nav-cta{background:var(--navy) !important;color:var(--white) !important;padding:0.5rem 1.25rem;border-radius:4px;font-size:0.8rem;font-weight:500}
 .nav-cta:hover{background:var(--navy3) !important;color:var(--white) !important}
 .hero{background:var(--navy);color:var(--white);padding:5rem 2.5rem;position:relative;overflow:hidden}
@@ -102,17 +102,16 @@ h1{animation-delay:0.2s}
 .hero-sub{animation-delay:0.25s}
 .hero-actions{animation-delay:0.3s}
 .hero-stats{animation-delay:0.4s}
-@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links li:not(:last-child){display:none}section{padding:3rem 1.5rem}.hero{padding:4rem 1.5rem}.about-grid,.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}footer{flex-direction:column;text-align:center}}
+@media(max-width:768px){nav{padding:1rem 1.5rem}section{padding:3rem 1.5rem}.hero{padding:4rem 1.5rem}.about-grid,.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}footer{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
 <nav>
   <a href="#" class="nav-logo">Garrett<span>.</span>Miner</a>
   <ul class="nav-links">
-    <li><a href="#solutions">Solutions</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="about.html" class="nav-cta">Work with me</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
 </nav>
 <section class="hero">
@@ -122,7 +121,7 @@ h1{animation-delay:0.2s}
     <p class="hero-sub">Specializing in Microsoft 365, Copilot governance, and intelligent workplace solutions. 10+ years helping enterprises get more out of their data and technology investments.</p>
     <div class="hero-actions">
       <a href="#solutions" class="btn-primary">View My Work</a>
-      <a href="about.html" class="btn-ghost">Let's Talk</a>
+      <a href="#contact" class="btn-ghost">Let's Talk</a>
     </div>
     <div class="hero-stats">
       <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Years in M365 architecture</div></div>
