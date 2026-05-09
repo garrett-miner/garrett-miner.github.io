@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Garrett Miner</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0f1f3d;--navy3:#1e3057;--bg:#f4f6f9;--white:#ffffff;--text:#0f1f3d;--muted:#5a6e87;--faint:#8fa3bb;--border:#dce3ed;--border2:#c8d4e3;--accent:#1a6eff;--accent2:#0051d4;--accent-light:#e8f0ff;--serif:'DM Serif Display',Georgia,serif;--body:'DM Sans',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--text);font-size:15px;line-height:1.6}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 1px 8px rgba(15,31,61,0.06)}
+.nav-logo{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--navy);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.75rem;list-style:none;align-items:center}
+.nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.04em;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy) !important;color:var(--white) !important;padding:0.5rem 1.25rem;border-radius:4px}
+.nav-cta:hover{background:var(--navy3) !important;color:var(--white) !important}
+.about-section{background:var(--white);padding:6rem 2.5rem}
+.about-grid{display:grid;grid-template-columns:280px 1fr;gap:5rem;align-items:center;max-width:900px;margin:0 auto}
+.photo-wrap{position:relative}
+.photo-wrap img{width:100%;border-radius:6px;display:block;object-fit:cover;aspect-ratio:4/5}
+.photo-tag{position:absolute;bottom:-1rem;left:50%;transform:translateX(-50%);white-space:nowrap;display:inline-flex;align-items:center;gap:6px;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:var(--white);border:1px solid var(--border);padding:0.4rem 1rem;border-radius:20px;color:var(--muted);box-shadow:0 2px 8px rgba(15,31,61,0.06)}
+.location-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0}
+.about-text{padding-top:0.5rem}
+.eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem}
+.about-text h1{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:400;line-height:1.15;color:var(--navy);margin-bottom:1.5rem}
+.about-text h1 em{font-style:italic;color:var(--faint)}
+.about-body{font-size:0.92rem;color:var(--muted);line-height:1.85;margin-bottom:1.1rem}
+.about-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1.75rem 0}
+.tag{font-size:0.72rem;font-weight:600;letter-spacing:0.06em;padding:0.3rem 0.8rem;border-radius:3px;background:var(--accent-light);color:var(--accent)}
+.about-links{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+.btn-primary{font-size:0.85rem;font-weight:600;padding:0.7rem 1.6rem;background:var(--navy);color:var(--white);border:none;border-radius:4px;text-decoration:none;display:inline-block;letter-spacing:0.02em;transition:all 0.2s}
+.btn-primary:hover{background:var(--navy3);transform:translateY(-1px)}
+.btn-ghost{font-size:0.85rem;font-weight:500;padding:0.7rem 1.6rem;background:transparent;color:var(--navy);border:1px solid var(--border2);border-radius:4px;text-decoration:none;transition:all 0.2s}
+.btn-ghost:hover{border-color:var(--navy)}
+footer{padding:1.75rem 2.5rem;border-top:1px solid var(--border);background:var(--white);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.78rem;color:var(--muted)}
+.footer-logo{font-family:var(--serif);font-size:1rem;color:var(--navy)}
+.footer-logo span{color:var(--accent)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:var(--muted);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--navy)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.about-grid{animation:fadeUp 0.5s ease both}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links li:not(:last-child){display:none}.about-section{padding:4rem 1.5rem}.about-grid{grid-template-columns:1fr;gap:3rem}.photo-wrap img{max-width:240px;margin:0 auto}footer{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Garrett<span>.</span>Miner</a>
+  <ul class="nav-links">
+    <li><a href="index.html#solutions">Solutions</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#process">Process</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Work with me</a></li>
+  </ul>
+</nav>
+
+<section class="about-section">
+  <div class="about-grid">
+    <div class="photo-wrap">
+      <img src="headshot.jpg" alt="Garrett Miner">
+      <div class="photo-tag"><div class="location-dot"></div>Chicago, IL</div>
+    </div>
+    <div class="about-text">
+      <div class="eyebrow">About me</div>
+      <h1>Data & AI Architect.<br><em>Chicago, IL.</em></h1>
+      <p class="about-body">I'm a Data & AI Architect based in Chicago with 10+ years of experience designing and building data solutions and AI systems for enterprise organizations. I specialize in translating complex technical challenges into practical, scalable solutions that drive real business outcomes.</p>
+      <p class="about-body">My work spans data architecture, AI enablement, and digital experience — with a strong focus on building solutions that work for the people actually using them. I bring both the technical depth and strategic thinking needed to take projects from concept to deployment.</p>
+      <div class="about-tags">
+        <span class="tag">Data Architecture</span>
+        <span class="tag">AI Solutions</span>
+        <span class="tag">AI Enablement</span>
+        <span class="tag">Digital Experience</span>
+        <span class="tag">Enterprise Systems</span>
+      </div>
+      <div class="about-links">
+        <a href="mailto:garrettwminer@gmail.com" class="btn-primary">Get in touch</a>
+        <a href="https://www.linkedin.com/in/garrett-miner-058b0295/" target="_blank" class="btn-ghost">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Garrett<span>.</span>Miner</div>
+  <div>Data &amp; AI Architect &middot; Chicago, IL</div>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/garrett-miner-058b0295/" target="_blank">LinkedIn</a>
+    <a href="mailto:garrettwminer@gmail.com">Email</a>
+  </div>
+</footer>
+
+</body>
+</html>
