@@ -3,106 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Garrett Miner — AI Solutions Architect</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<title>Garrett Miner — Data & AI Architect</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --bg: #080b0f;
-  --bg2: #0e1318;
-  --bg3: #141a22;
-  --surface: #1a2330;
-  --border: rgba(255,255,255,0.07);
-  --border-bright: rgba(255,255,255,0.15);
-  --text: #e8edf2;
-  --muted: #7a8a99;
-  --faint: #3a4a58;
-  --accent: #00d4ff;
-  --accent2: #0099cc;
-  --accent-glow: rgba(0,212,255,0.15);
-  --accent-glow2: rgba(0,212,255,0.06);
-  --gold: #f5c842;
-  --green: #00e5a0;
-  --serif: 'Syne', sans-serif;
-  --body: 'Epilogue', sans-serif;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: var(--body);
-  background: var(--bg);
-  color: var(--text);
-  overflow-x: hidden;
-  font-size: 16px;
-  line-height: 1.6;
-  cursor: none;
-}
-
-/* CUSTOM CURSOR */
-.cursor {
-  position: fixed;
-  width: 10px; height: 10px;
-  background: var(--accent);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s, width 0.2s, height 0.2s, background 0.2s;
-  mix-blend-mode: screen;
-}
-.cursor-ring {
-  position: fixed;
-  width: 36px; height: 36px;
-  border: 1px solid rgba(0,212,255,0.5);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  transition: transform 0.15s ease-out, width 0.3s, height 0.3s;
-}
-
-/* GRID BACKGROUND */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 1.5rem 4rem;
-  background: rgba(8,11,15,0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-logo {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--text);
-  text-decoration: none;
-}
-.nav-logo span { color: var(--accent); }
-.nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
-.nav-links a {
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.nav-links a
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0f1f3d;--navy2:#162647;--navy3:#1e3057;--slate:#2d4a6e;--slate2:#3d5f85;--bg:#f4f6f9;--white:#ffffff;--text:#0f1f3d;--muted:#5a6e87;--faint:#8fa3bb;--border:#dce3ed;--border2:#c8d4e3;--accent:#1a6eff;--accent2:#0051d4;--accent-light:#e8f0ff;--gold:#c8922a;--gold-light:#fdf3e0;--serif:'DM Serif Display',Georgia,serif;--body:'DM Sans',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--text);overflow-x:hidden;font-size:15px;line-height:1.6}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 1px 8px rgba(15,31,61,0.06)}
+.nav-logo{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--navy);text-decoration:none;letter-spacing:0.01em}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.75rem;list-style:none;align-items:center}
+.nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.04em;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--navy) !important;color:var(--white) !important;padding:0.5rem 1.25rem;border-radius:4px;font-size:0.8rem;font-weight:500}
+.nav-cta:hover{background:var(--navy3) !important;color:var(--white) !important}
+.hero{background:var(--navy);color:var(--white);padding:5rem 2.5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(135deg,transparent 0%,rgba(26,110,255,0.08) 100%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent)}
+.hero-inner{position:relative;z-index:1;max-width:700px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:1.25rem}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--accent)}
+h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,4rem);font-weight:400;line-height:1.1;margin-bottom:1.25rem;color:var(--white)}
+h1 em{font-style:italic;color:rgba(255,255,255,0.6)}
+.hero-sub{font-size:1rem;font-weight:300;color:rgba(255,255,255,0.6);max-width:500px;margin-bottom:2.5rem;line-height:1.75}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{font-size:0.85rem;font-weight:600;padding:0.75rem 1.75rem;background:var(--accent);color:var(--white);border:none;border-radius:4px;text-decoration:none;transition:all 0.2s;display:inline-block;letter-spacing:0.02em}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-1px)}
+.btn-ghost{font-size:0.85rem;font-weight:500;padding:0.75rem 1.75rem;background:transparent;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.2);border-radius:4px;text-decoration:none;transition:all 0.2s}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.5);color:var(--white)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:3.5rem;border-top:1px solid rgba(255,255,255,0.1);padding-top:2.5rem}
+.stat{padding-right:2rem}
+.stat-num{font-family:var(--serif);font-size:2.2rem;font-weight:400;color:var(--white);line-height:1}
+.stat-label{font-size:0.75rem;color:rgba(255,255,255,0.45);margin-top:0.35rem;letter-spacing:0.03em}
+section{padding:5rem 2.5rem}
+.section-eyebrow{font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem}
+.section-title{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.5rem);font-weight:400;line-height:1.15;margin-bottom:0.75rem;color:var(--navy)}
+.section-sub{font-size:0.9rem;color:var(--muted);max-width:440px;line-height:1.7}
+.solutions{background:var(--white)}
+.solutions-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+.solutions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--border)}
+.solution-card{background:var(--white);padding:1.75rem;transition:background 0.2s;position:relative}
+.solution-card:hover{background:#fafbfd}
+.card-num{font-family:var(--serif);font-size:0.85rem;color:var(--faint);margin-bottom:1rem;font-style:italic}
+.card-title{font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;color:var(--navy)}
+.card-desc{font-size:0.82rem;color:var(--muted);line-height:1.65}
+.card-tag{display:inline-block;margin-top:1rem;font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-light);padding:0.25rem 0.65rem;border-radius:3px}
+.about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;align-items:start}
+.about-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:2rem}
+.about-card-title{font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.skill-row{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.85rem}
+.skill-name{font-size:0.8rem;color:var(--text);min-width:155px;font-weight:500}
+.skill-bar-bg{flex:1;height:3px;background:var(--border2);border-radius:2px;overflow:hidden}
+.skill-bar{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--slate2),var(--accent))}
+.skill-pct{font-size:0.72rem;color:var(--muted);min-width:32px;text-align:right}
+.cert-list{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+.cert-badge{font-size:0.7rem;font-weight:600;padding:0.3rem 0.7rem;border-radius:3px;background:var(--accent-light);color:var(--accent)}
+.about-text .section-title{margin-bottom:1.25rem}
+.about-body{font-size:0.88rem;color:var(--muted);line-height:1.8;margin-bottom:1rem}
+.about-highlights{margin:1.5rem 0;display:flex;flex-direction:column;gap:0.75rem}
+.highlight-item{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.85rem;color:var(--text)}
+.highlight-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px}
+.process{background:var(--navy);color:var(--white)}
+.process .section-eyebrow{color:rgba(255,255,255,0.4)}
+.process .section-title{color:var(--white)}
+.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;margin-top:3rem}
+.process-item{padding:1.5rem;border:1px solid rgba(255,255,255,0.08);border-radius:4px;background:rgba(255,255,255,0.03)}
+.process-num{font-family:var(--serif);font-size:2rem;font-weight:400;color:rgba(255,255,255,0.15);line-height:1;margin-bottom:1rem;font-style:italic}
+.process-title{font-size:0.9rem;font-weight:600;color:var(--white);margin-bottom:0.5rem}
+.process-desc{font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.65}
+.contact{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start}
+.contact-info .section-title{margin-bottom:1rem}
+.contact-info-body{font-size:0.88rem;color:var(--muted);line-height:1.75;margin-bottom:2rem}
+.contact-detail{display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text);margin-bottom:0.75rem;text-decoration:none}
+.contact-detail:hover{color:var(--accent)}
+.contact-detail-label{font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--faint);min-width:60px}
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-group{display:flex;flex-direction:column;gap:0.35rem}
+.form-group label{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+.form-group input,.form-group textarea,.form-group select{background:var(--bg);border:1px solid var(--border);color:var(--text);font-family:var(--body);font-size:0.88rem;padding:0.65rem 0.9rem;border-radius:4px;outline:none;transition:border 0.2s}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent);background:var(--white)}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-submit{font-size:0.88rem;font-weight:600;padding:0.8rem;background:var(--navy);color:var(--white);border:none;border-radius:4px;cursor:pointer;transition:all 0.2s;margin-top:0.25rem;letter-spacing:0.02em}
+.form-submit:hover{background:var(--navy3)}
+footer{padding:1.75rem 2.5rem;border-top:1px solid var(--border);background:var(--white);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.78rem;color:var(--muted)}
+.footer-logo{font-family:var(--serif);font-size:1rem;color:var(--navy)}
+.footer-logo span{color:var(--accent)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:var(--muted);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--navy)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-inner>*{animation:fadeUp 0.5s ease both}
+.hero-eyebrow{animation-delay:0.1s}
+h1{animation-delay:0.2s}
+.hero-sub{animation-delay:0.25s}
+.hero-actions{animation-delay:0.3s}
+.hero-stats{animation-delay:0.4s}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links li:not(:last-child){display:none}section{padding:3rem 1.5rem}.hero{padding:4rem 1.5rem}.about-grid,.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}footer{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="nav-logo">Garrett<span>.</span>Miner</a>
+  <ul class="nav-links">
+    <li><a href="#solutions">Solutions</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact" class="nav-cta">Work with me</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Available for projects</div>
+    <h1>Data & AI Architecture <em>Solutions</em></h1>
+    <p class="hero-sub">Specializing in Microsoft 365, Copilot governance, and intelligent workplace solutions. 10+ years helping enterprises get more out of their data and technology investments.</p>
+    <div class="hero-actions">
+      <a href="#solutions" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-ghost">Let's Talk</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Years in M365 architecture</div></div>
+      <div class="stat"><div class="stat-num">1k+</div><div class="stat-label">Enterprise users impacted</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Enterprise deployments</div></div>
+    </div>
+  </div>
+</section>
+<section class="solutions" id="solutions">
+  <div class="solutions-header">
+    <div>
+      <div class="section-eyebrow">What I build</div>
+      <div class="section-title">AI Solutions &amp; Platforms</div>
+    </div>
+    <p class="section-sub">From governance frameworks to custom AI agents — real solutions deployed in real enterprise environments.</p>
+  </div>
+  <div class="solutions-grid">
+    <div class="solution-card"><div class="card-num">01</div><div class="card-title">Custom AI Agents</div><p class="card-desc">Purpose-built AI agents for internal workflows — document intelligence, HR knowledge bases, and IT helpdesk automation deployed inside your M365 environment.</p><span class="card-tag">Copilot Studio · Azure AI</span></div>
+    <div class="solution-card"><div class="card-num">02</div><div class="card-title">Copilot Governance Framework</div><p class="card-desc">End-to-end governance for Microsoft 365 Copilot — data classification, access policies, sensitivity labels, and adoption guardrails that let you deploy AI without the risk.</p><span class="card-tag">Purview · Defender · Entra</span></div>
+    <div class="solution-card"><div class="card-num">03</div><div class="card-title">Information Architecture Design</div><p class="card-desc">SharePoint and M365 information architecture that AI can navigate — taxonomy, metadata frameworks, and site structures built for both humans and AI agents.</p><span class="card-tag">SharePoint · Viva · Teams</span></div>
+    <div class="solution-card"><div class="card-num">04</div><div class="card-title">Power Platform Automation</div><p class="card-desc">Intelligent workflow automation connecting your business systems — approvals, provisioning, and cross-platform integrations using Power Automate and Power Apps.</p><span class="card-tag">Power Automate · Power Apps</span></div>
+    <div class="solution-card"><div class="card-num">05</div><div class="card-title">Digital Workplace Strategy</div><p class="card-desc">Modernization roadmaps for your intranet and digital workplace — aligning IT, HR, Legal, and Communications around a unified platform.</p><span class="card-tag">M365 · Viva Connections</span></div>
+    <div class="solution-card"><div class="card-num">06</div><div class="card-title">AI Enablement Programs</div><p class="card-desc">Change management and training programs that drive real AI adoption. Custom workshops, playbooks, and enablement content built for your workforce.</p><span class="card-tag">Training · Workshops · Playbooks</span></div>
+  </div>
+</section>
+<section class="about" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="about-card">
+        <div class="about-card-title">Core expertise</div>
+        <div class="skill-row"><span class="skill-name">Microsoft 365</span><div class="skill-bar-bg"><div class="skill-bar" style="width:96%"></div></div><span class="skill-pct">96%</span></div>
+        <div class="skill-row"><span class="skill-name">SharePoint</span><div class="skill-bar-bg"><div class="skill-bar" style="width:95%"></div></div><span class="skill-pct">95%</span></div>
+        <div class="skill-row"><span class="skill-name">Copilot / AI Governance</span><div class="skill-bar-bg"><div class="skill-bar" style="width:90%"></div></div><span class="skill-pct">90%</span></div>
+        <div class="skill-row"><span class="skill-name">Power Platform</span><div class="skill-bar-bg"><div class="skill-bar" style="width:85%"></div></div><span class="skill-pct">85%</span></div>
+        <div class="skill-row"><span class="skill-name">Azure Data / Purview</span><div class="skill-bar-bg"><div class="skill-bar" style="width:75%"></div></div><span class="skill-pct">75%</span></div>
+        <div class="skill-row"><span class="skill-name">Information Architecture</span><div class="skill-bar-bg"><div class="skill-bar" style="width:93%"></div></div><span class="skill-pct">93%</span></div>
+        <div class="cert-list">
+          <span class="cert-badge">DP-900 in progress</span>
+          <span class="cert-badge">AZ-305 target</span>
+          <span class="cert-badge">M365 Architect</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="section-eyebrow">About</div>
+      <div class="section-title">Building the layer where AI meets enterprise data.</div>
+      <p class="about-body">I'm a Data &amp; AI Architect based in Chicago with 10+ years designing the information systems that large organizations depend on. My work sits at the intersection of Microsoft's AI stack and the governance, architecture, and change management that makes AI actually deployable.</p>
+      <div class="about-highlights">
+        <div class="highlight-item"><div class="highlight-dot"></div><span>Currently leading digital experience and AI enablement at UL Research Institutes</span></div>
+        <div class="highlight-item"><div class="highlight-dot"></div><span>Architected Copilot governance framework across 1,000+ employees</span></div>
+        <div class="highlight-item"><div class="highlight-dot"></div><span>10+ years of SharePoint and M365 architecture across multiple industries</span></div>
+        <div class="highlight-item"><div class="highlight-dot"></div><span>Deep cross-functional experience across IT, HR, Legal, and Communications</span></div>
+      </div>
+      <a href="#contact" class="btn-primary" style="margin-top:1.5rem">Start a conversation</a>
+    </div>
+  </div>
+</section>
+<section class="process" id="process">
+  <div class="section-eyebrow">How I work</div>
+  <div class="section-title">From discovery to deployment</div>
+  <div class="process-grid">
+    <div class="process-item"><div class="process-num">01</div><div class="process-title">Discovery</div><p class="process-desc">Deep dive into your data environment, governance gaps, and AI readiness. Stakeholder alignment across IT, Legal, and Business.</p></div>
+    <div class="process-item"><div class="process-num">02</div><div class="process-title">Architecture</div><p class="process-desc">Design the information architecture, governance framework, and solution blueprint tailored to your organization's needs.</p></div>
+    <div class="process-item"><div class="process-num">03</div><div class="process-title">Build</div><p class="process-desc">Hands-on implementation — agents, workflows, governance policies, and integrations. Working solutions, not slide decks.</p></div>
+    <div class="process-item"><div class="process-num">04</div><div class="process-title">Enablement</div><p class="process-desc">Training, documentation, and change management to drive real adoption. Your team owns it when we're done.</p></div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="section-eyebrow">Get in touch</div>
+      <div class="section-title">Ready to build something?</div>
+      <p class="contact-info-body">Whether you're deploying Copilot, redesigning your digital workplace, or need a custom AI agent — let's talk about what's possible.</p>
+      <a href="mailto:garrettwminer@gmail.com" class="contact-detail"><span class="contact-detail-label">Email</span>garrettwminer@gmail.com</a>
+      <a href="https://www.linkedin.com/in/garrett-miner-058b0295/" target="_blank" class="contact-detail"><span class="contact-detail-label">LinkedIn</span>garrett-miner</a>
+      <a class="contact-detail"><span class="contact-detail-label">Location</span>Chicago, IL</a>
+    </div>
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group"><label>Name</label><input type="text" placeholder="Jane Smith"></div>
+        <div class="form-group"><label>Company</label><input type="text" placeholder="Acme Corp"></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="jane@acmecorp.com"></div>
+      <div class="form-group">
+        <label>Service needed</label>
+        <select>
+          <option value="">Select a service...</option>
+          <option>Copilot Governance Framework</option>
+          <option>Custom AI Agent</option>
+          <option>Information Architecture</option>
+          <option>Power Platform Automation</option>
+          <option>Digital Workplace Strategy</option>
+          <option>AI Enablement Program</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Brief overview of your project, timeline, and goals..."></textarea></div>
+      <button class="form-submit" onclick="this.textContent='Message sent \u2713';this.style.background='#1a6eff'">Send Message</button>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-logo">Garrett<span>.</span>Miner</div>
+  <div>Data &amp; AI Architect &middot; Chicago, IL</div>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/garrett-miner-058b0295/" target="_blank">LinkedIn</a>
+    <a href="mailto:garrettwminer@gmail.com">Email</a>
+  </div>
+</footer>
+</body>
+</html>
