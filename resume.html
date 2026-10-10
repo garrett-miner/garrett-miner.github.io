@@ -3,170 +3,205 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Garrett Miner | Resume</title>
+<title>Resume — Garrett Miner</title>
 <meta name="description" content="Garrett Miner, Lead, Digital Experience and AI Adoption. Chicago, IL.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#000000; --ink:#f2f2f2; --muted:#9c9c9c; --line:#242424; --accent:#ffb547; --accent-2:#6fc3ff;
-  --glow-1:rgba(255,181,71,.16); --glow-2:rgba(111,195,255,.13); --chip:rgba(255,181,71,.35); --chip-2:rgba(111,195,255,.35);
-  --font:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);background-image:radial-gradient(640px 320px at 12% -6%,var(--glow-1),transparent 70%),radial-gradient(720px 360px at 96% -4%,var(--glow-2),transparent 70%);background-repeat:no-repeat;color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6}
-::selection{background:var(--accent);color:var(--bg)}
-a:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:4px}
-.page{max-width:820px;margin:0 auto;padding-inline:20px;padding-block:64px 80px}
-header{padding-bottom:0}
-header::after{content:"";display:block;height:2px;margin-top:28px;background:var(--accent)}
-h1{font-size:clamp(40px,7vw,62px);font-weight:600;line-height:1.02;margin:0;letter-spacing:-.025em;background:linear-gradient(90deg,var(--ink) 30%,var(--accent) 75%,var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.role{margin:10px 0 0;font-size:18px;color:var(--accent);font-weight:500}
-.contact{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;color:var(--muted);font-size:14.5px;align-items:center}
-.contact span{margin-right:6px}
-.contact a{color:var(--accent-2);text-decoration:none;border:1px solid var(--chip-2);border-radius:999px;padding:5px 13px;transition:background .2s,color .2s}
-.contact a:hover{background:var(--accent-2);color:var(--bg)}
-section{padding-top:40px}
-h2{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
-h2::before{content:"";width:8px;height:8px;background:var(--accent);border-radius:2px;flex:none}
-h2::after{content:"";flex:1;height:1px;background:var(--line)}
-p{margin:0}
-.comp{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
-.comp li{margin:0;border:1px solid var(--chip);border-radius:999px;padding:5px 13px;font-size:14.5px;transition:border-color .2s,color .2s}
-.comp li:hover{border-color:var(--accent);color:var(--accent)}
-.employer{position:relative;padding:4px 0 28px 28px;border-left:1px solid var(--line);margin-left:6px}
-.employer:last-child{padding-bottom:4px}
-.employer::before{content:"";position:absolute;left:-7px;top:9px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--accent);box-shadow:0 0 12px var(--glow-1)}
-.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 16px}
-.org{font-weight:600;font-size:18px}
-.loc,.dates{color:var(--muted);font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;font-variant-numeric:tabular-nums}
-.pos{margin-top:18px}
-.pos:first-of-type{margin-top:8px}
-.title{font-weight:500;color:var(--accent-2)}
-ul.b{margin:8px 0 0;padding-left:18px}
-ul.b li{margin:6px 0;color:var(--ink)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0f1f3d;--navy2:#162647;--navy3:#1e3057;--slate:#2d4a6e;--slate2:#3d5f85;--bg:#f4f6f9;--white:#ffffff;--text:#0f1f3d;--muted:#5a6e87;--faint:#8fa3bb;--border:#dce3ed;--border2:#c8d4e3;--accent:#1a6eff;--accent2:#0051d4;--accent-light:#e8f0ff;--gold:#c8922a;--gold-light:#fdf3e0;--serif:'DM Serif Display',Georgia,serif;--body:'DM Sans',system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--text);font-size:15px;line-height:1.6}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 1px 8px rgba(15,31,61,0.06)}
+.nav-logo{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--navy);text-decoration:none;letter-spacing:0.01em}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.75rem;list-style:none;align-items:center}
+.nav-links a{font-size:0.8rem;font-weight:500;letter-spacing:0.04em;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-links a.active{color:var(--navy);font-weight:600}
+.nav-cta{background:var(--navy) !important;color:var(--white) !important;padding:0.5rem 1.25rem;border-radius:4px;font-size:0.8rem;font-weight:500}
+.nav-cta:hover{background:var(--navy3) !important;color:var(--white) !important}
+.page{max-width:900px;margin:0 auto;padding:3rem 2rem 5rem}
+.resume-shell{background:var(--white);border:1px solid var(--border);box-shadow:0 10px 30px rgba(15,31,61,0.04);border-radius:8px;padding:2.25rem 2.5rem}
+.top-links{display:flex;gap:0.75rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.top-links a{font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:0.35rem 0.7rem;border:1px solid var(--border);border-radius:999px;background:var(--bg)}
+.top-links a:hover{color:var(--navy);border-color:var(--navy)}
+header{padding-bottom:1.5rem;border-bottom:1px solid var(--border)}
+header h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,4rem);font-weight:400;line-height:1.05;color:var(--navy);margin:0}
+.role{font-size:1.05rem;font-weight:500;color:var(--accent);margin-top:0.7rem}
+.contact{display:flex;flex-wrap:wrap;gap:0.6rem 0.9rem;margin-top:1rem;color:var(--muted);font-size:0.82rem}
+.contact a{color:var(--accent2);text-decoration:none;padding:0.38rem 0.75rem;border:1px solid var(--border2);border-radius:999px;background:var(--accent-light)}
+.contact a:hover{background:var(--white);border-color:var(--accent)}
+section{padding-top:2rem}
+.section-head{display:flex;align-items:center;gap:0.8rem;margin-bottom:1rem}
+.section-head h2{font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin:0}
+.section-head::after{content:"";display:block;height:1px;background:var(--border);flex:1}
+p{color:var(--text);line-height:1.8}
+.comp{display:flex;flex-wrap:wrap;gap:0.5rem;list-style:none}
+.comp li{font-size:0.8rem;padding:0.35rem 0.7rem;border:1px solid var(--border);border-radius:999px;background:var(--bg);color:var(--navy)}
+.employer{position:relative;padding-left:1.3rem;border-left:1px solid var(--border);margin-left:0.35rem}
+.employer + .employer{margin-top:1.5rem}
+.employer::before{content:"";position:absolute;left:-0.34rem;top:0.35rem;width:0.7rem;height:0.7rem;border-radius:50%;background:var(--white);border:2px solid var(--accent)}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:0.5rem 1rem}
+.org{font-size:1.08rem;font-weight:600;color:var(--navy)}
+.loc,.dates{font-size:0.76rem;color:var(--muted);font-weight:500;letter-spacing:0.02em}
+.pos{margin-top:1rem}
+.title{font-size:0.96rem;font-weight:600;color:var(--accent2)}
+ul.b{margin-top:0.5rem;padding-left:1.2rem}
+ul.b li{margin:0.5rem 0;color:var(--text);line-height:1.7}
 ul.b li::marker{color:var(--accent)}
-.skills{display:grid;grid-template-columns:130px minmax(0,1fr);gap:10px 16px;margin:0}
-.skills dt{color:var(--accent);font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;padding-top:2px}
-.skills dd{margin:0}
-.resume-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
-.resume-links a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--ink);padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,0.02);font-size:14px}
-.resume-links a:hover{border-color:var(--accent);color:var(--accent)}
-@media (max-width:520px){.skills{grid-template-columns:minmax(0,1fr);gap:2px}.skills dd{margin-bottom:10px}.employer{padding-left:22px}.resume-links{justify-content:flex-start}}
+.skills{display:grid;grid-template-columns:140px minmax(0,1fr);gap:0.75rem 1rem}
+.skills dt{font-size:0.73rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent)}
+.skills dd{margin:0;color:var(--text);line-height:1.8}
+footer{padding:1.75rem 2.5rem;border-top:1px solid var(--border);background:var(--white);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.78rem;color:var(--muted)}
+.footer-logo{font-family:var(--serif);font-size:1rem;color:var(--navy)}
+.footer-logo span{color:var(--accent)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:var(--muted);text-decoration:none}
+.footer-links a:hover{color:var(--navy)}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{gap:1rem}.page{padding:2rem 1rem 3rem}.resume-shell{padding:1.5rem}.skills{grid-template-columns:1fr}.footer{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
+<nav>
+  <a href="index.html" class="nav-logo">Garrett<span>.</span>Miner</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="resume.html" class="active">Resume</a></li>
+    <li><a href="index.html#solutions">Solutions</a></li>
+    <li><a href="index.html#process">Process</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
 <main class="page">
-  <header>
-    <div class="resume-links">
+  <div class="resume-shell">
+    <div class="top-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
     </div>
-    <h1>Garrett Miner</h1>
-    <p class="role">Lead, Digital Experience &amp; AI Adoption</p>
-    <div class="contact">
-      <span>Chicago, IL</span>
-      <a href="mailto:garrettwminer@gmail.com">garrettwminer@gmail.com</a>
-      <a href="https://www.linkedin.com/in/garrett-miner-058b0295/" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </header>
 
-  <section>
-    <h2>Professional Summary</h2>
-    <p>Digital workplace and AI adoption leader with 10+ years of experience modernizing enterprise collaboration platforms, designing information architecture and driving organization-wide adoption of new technology. Currently leads AI adoption for a 1,000+ employee research organization, including governance, a team of AI agent developers and a unified usage monitoring model across four AI platforms. Partners with senior leadership to align technology investments with business priorities, and brings a combined background in information systems and graphic design to every initiative, with a focus on usability, measurable adoption and responsible implementation.</p>
-  </section>
-
-  <section>
-    <h2>Core Competencies</h2>
-    <ul class="comp">
-      <li>AI Strategy &amp; Adoption</li><li>AI Governance &amp; Responsible Use</li><li>AI Agent Development</li><li>Employee Experience Strategy</li><li>Information Architecture</li><li>UX &amp; Interface Design</li><li>Usage Analytics &amp; Reporting</li><li>Change Management</li><li>Stakeholder Leadership</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Experience</h2>
-
-    <div class="employer">
-      <div class="head"><span class="org">UL Research Institutes</span><span class="loc">Evanston, IL · Jan 2024 – Present</span></div>
-      <div class="pos">
-        <div class="head"><span class="title">Lead, Digital Experience &amp; AI Adoption</span></div>
-        <ul class="b">
-          <li>Direct the AI adoption program for 1,000+ employees, including user education, role-based training and the governance-aligned rollout of AI assistants and agents.</li>
-          <li>Lead and mentor a team of AI Agent Developers and AI Agent Specialists responsible for agent development, enablement and implementation.</li>
-          <li>Architected a federated AI usage monitoring model that unifies metering across four AI platforms in Microsoft Fabric, OneLake and Power BI, giving leadership one consolidated view of adoption.</li>
-          <li>Establish governance, access policies and usage guardrails for Microsoft 365 Copilot, Copilot Studio, Azure AI Foundry and GitHub Copilot.</li>
-          <li>Led the redesign of the company intranet into a scalable, user-centered platform, defining its site architecture, templates, navigation standards and UX guidelines.</li>
-          <li>Co-developed an enterprise application guide mapping 430 applications to 35 business capabilities, helping employees select the right tool for each task.</li>
-          <li>Partner with IT, HR, Legal, Communications and senior leadership on governance models, modernization roadmaps and change management for each rollout.</li>
-        </ul>
+    <header>
+      <h1>Garrett Miner</h1>
+      <p class="role">Lead, Digital Experience &amp; AI Adoption</p>
+      <div class="contact">
+        <span>Chicago, IL</span>
+        <a href="mailto:garrettwminer@gmail.com">garrettwminer@gmail.com</a>
+        <a href="https://www.linkedin.com/in/garrett-miner-058b0295/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-    </div>
+    </header>
 
-    <div class="employer">
-      <div class="head"><span class="org">The Community Solution</span><span class="loc">Chicago, IL</span></div>
-      <div class="pos">
-        <div class="head"><span class="title">Senior Systems &amp; Design Analyst</span><span class="dates">Jan 2021 – Dec 2023</span></div>
-        <ul class="b">
-          <li>Directed the modernization and optimization of a 20,000-user Microsoft 365 environment, improving collaboration, usability and governance at scale.</li>
-          <li>Redesigned intranet site structures, navigation and page layouts to improve usability, consistency and access to resources.</li>
-          <li>Developed governance documentation, SOPs, lifecycle workflows and training materials that strengthened platform management and user proficiency.</li>
-          <li>Partnered with business units and IT leadership to align collaboration standards, improve information architecture and support modernization roadmaps.</li>
-          <li>Supported pilot programs, user testing and early adoption efforts to validate new platform features ahead of enterprise rollout.</li>
-          <li>Streamlined collaboration workflows across multiple business units, improving document discoverability and reducing outdated or duplicate content.</li>
-        </ul>
-      </div>
-      <div class="pos">
-        <div class="head"><span class="title">Knowledge &amp; Digital Systems Analyst</span><span class="dates">Mar 2018 – Jan 2021</span></div>
-        <ul class="b">
-          <li>Led migrations from SharePoint 2010 and 2013 to SharePoint Online, including information architecture redesign, UX planning, communication strategy and organization-wide adoption.</li>
-          <li>Built modern, responsive site designs using HTML, CSS and JavaScript, aligned with governance and lifecycle standards.</li>
-          <li>Modernized legacy InfoPath forms by redesigning workflows on SharePoint and Power Platform, reducing long-term technical debt.</li>
-          <li>Created standardized SOPs, provisioning workflows and training documentation that improved governance, operational efficiency and support processes.</li>
-          <li>Partnered with business stakeholders to design site pages, layouts and content structures around real user workflows.</li>
-        </ul>
-      </div>
-    </div>
+    <section>
+      <div class="section-head"><h2>Professional Summary</h2></div>
+      <p>Digital workplace and AI adoption leader with 10+ years of experience modernizing enterprise collaboration platforms, designing information architecture and driving organization-wide adoption of new technology. Currently leads AI adoption for a 1,000+ employee research organization, including governance, a team of AI agent developers and a unified usage monitoring model across four AI platforms. Partners with senior leadership to align technology investments with business priorities, and brings a combined background in information systems and graphic design to every initiative, with a focus on usability, measurable adoption and responsible implementation.</p>
+    </section>
 
-    <div class="employer">
-      <div class="head"><span class="org">Sedona Technologies</span><span class="loc">Moline, IL</span></div>
-      <div class="pos">
-        <div class="head"><span class="title">Knowledge Management Analyst</span><span class="dates">Jun 2016 – Feb 2018</span></div>
-        <ul class="b">
-          <li>Led SharePoint 2007 to Office 365 migration projects for client organizations using structured methodologies and standardized tooling.</li>
-          <li>Designed mobile-responsive SharePoint frameworks and UX patterns that improved discoverability, structure and consistency.</li>
-          <li>Partnered with solution architects to strengthen information architecture, governance practices, lifecycle tracking and client delivery standards.</li>
-          <li>Delivered productivity training on OneNote, Outlook and Teams to build digital literacy and workflow efficiency.</li>
-          <li>Authored QA plans, technical documentation and SOPs aligned with enterprise IT policies and SLAs.</li>
-        </ul>
-      </div>
-      <div class="pos">
-        <div class="head"><span class="title">Knowledge Management Intern</span><span class="dates">Jun 2014 – Feb 2016</span></div>
-        <ul class="b">
-          <li>Built SharePoint pages and site components in collaboration with senior analysts to support department-specific needs.</li>
-          <li>Resolved user access, permissions and workflow issues across multiple SharePoint environments.</li>
-          <li>Contributed to documentation and QA during migration cycles and release validations.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <section>
+      <div class="section-head"><h2>Core Competencies</h2></div>
+      <ul class="comp">
+        <li>AI Strategy &amp; Adoption</li>
+        <li>AI Governance &amp; Responsible Use</li>
+        <li>AI Agent Development</li>
+        <li>Employee Experience Strategy</li>
+        <li>Information Architecture</li>
+        <li>UX &amp; Interface Design</li>
+        <li>Usage Analytics &amp; Reporting</li>
+        <li>Change Management</li>
+        <li>Stakeholder Leadership</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Education</h2>
-    <div class="head"><span class="org">Augustana College, Rock Island, IL</span><span class="dates">May 2016</span></div>
-    <p>Bachelor of Arts in Business Administration, cum laude. Concentrations in Management Information Systems and Graphic Design.</p>
-  </section>
+    <section>
+      <div class="section-head"><h2>Experience</h2></div>
 
-  <section>
-    <h2>Tools &amp; Technologies</h2>
-    <dl class="skills">
-      <dt>AI &amp; Data</dt><dd>Microsoft 365 Copilot, Copilot Studio, Azure AI Foundry, GitHub Copilot, Microsoft Fabric, OneLake, Power BI</dd>
-      <dt>Platforms</dt><dd>Microsoft 365, SharePoint Online, Power Platform, ServiceNow</dd>
-      <dt>Design &amp; Web</dt><dd>Figma, Adobe Creative Suite, HTML, CSS, JavaScript</dd>
-    </dl>
-  </section>
+      <div class="employer">
+        <div class="head"><span class="org">UL Research Institutes</span><span class="loc">Evanston, IL · Jan 2024 – Present</span></div>
+        <div class="pos">
+          <div class="head"><span class="title">Lead, Digital Experience &amp; AI Adoption</span></div>
+          <ul class="b">
+            <li>Direct the AI adoption program for 1,000+ employees, including user education, role-based training and the governance-aligned rollout of AI assistants and agents.</li>
+            <li>Lead and mentor a team of AI Agent Developers and AI Agent Specialists responsible for agent development, enablement and implementation.</li>
+            <li>Architected a federated AI usage monitoring model that unifies metering across four AI platforms in Microsoft Fabric, OneLake and Power BI, giving leadership one consolidated view of adoption.</li>
+            <li>Establish governance, access policies and usage guardrails for Microsoft 365 Copilot, Copilot Studio, Azure AI Foundry and GitHub Copilot.</li>
+            <li>Led the redesign of the company intranet into a scalable, user-centered platform, defining its site architecture, templates, navigation standards and UX guidelines.</li>
+            <li>Co-developed an enterprise application guide mapping 430 applications to 35 business capabilities, helping employees select the right tool for each task.</li>
+            <li>Partner with IT, HR, Legal, Communications and senior leadership on governance models, modernization roadmaps and change management for each rollout.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="employer">
+        <div class="head"><span class="org">The Community Solution</span><span class="loc">Chicago, IL</span></div>
+        <div class="pos">
+          <div class="head"><span class="title">Senior Systems &amp; Design Analyst</span><span class="dates">Jan 2021 – Dec 2023</span></div>
+          <ul class="b">
+            <li>Directed the modernization and optimization of a 20,000-user Microsoft 365 environment, improving collaboration, usability and governance at scale.</li>
+            <li>Redesigned intranet site structures, navigation and page layouts to improve usability, consistency and access to resources.</li>
+            <li>Developed governance documentation, SOPs, lifecycle workflows and training materials that strengthened platform management and user proficiency.</li>
+            <li>Partnered with business units and IT leadership to align collaboration standards, improve information architecture and support modernization roadmaps.</li>
+            <li>Supported pilot programs, user testing and early adoption efforts to validate new platform features ahead of enterprise rollout.</li>
+            <li>Streamlined collaboration workflows across multiple business units, improving document discoverability and reducing outdated or duplicate content.</li>
+          </ul>
+        </div>
+        <div class="pos">
+          <div class="head"><span class="title">Knowledge &amp; Digital Systems Analyst</span><span class="dates">Mar 2018 – Jan 2021</span></div>
+          <ul class="b">
+            <li>Led migrations from SharePoint 2010 and 2013 to SharePoint Online, including information architecture redesign, UX planning, communication strategy and organization-wide adoption.</li>
+            <li>Built modern, responsive site designs using HTML, CSS and JavaScript, aligned with governance and lifecycle standards.</li>
+            <li>Modernized legacy InfoPath forms by redesigning workflows on SharePoint and Power Platform, reducing long-term technical debt.</li>
+            <li>Created standardized SOPs, provisioning workflows and training documentation that improved governance, operational efficiency and support processes.</li>
+            <li>Partnered with business stakeholders to design site pages, layouts and content structures around real user workflows.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="employer">
+        <div class="head"><span class="org">Sedona Technologies</span><span class="loc">Moline, IL</span></div>
+        <div class="pos">
+          <div class="head"><span class="title">Knowledge Management Analyst</span><span class="dates">Jun 2016 – Feb 2018</span></div>
+          <ul class="b">
+            <li>Led SharePoint 2007 to Office 365 migration projects for client organizations using structured methodologies and standardized tooling.</li>
+            <li>Designed mobile-responsive SharePoint frameworks and UX patterns that improved discoverability, structure and consistency.</li>
+            <li>Partnered with solution architects to strengthen information architecture, governance practices, lifecycle tracking and client delivery standards.</li>
+            <li>Delivered productivity training on OneNote, Outlook and Teams to build digital literacy and workflow efficiency.</li>
+            <li>Authored QA plans, technical documentation and SOPs aligned with enterprise IT policies and SLAs.</li>
+          </ul>
+        </div>
+        <div class="pos">
+          <div class="head"><span class="title">Knowledge Management Intern</span><span class="dates">Jun 2014 – Feb 2016</span></div>
+          <ul class="b">
+            <li>Built SharePoint pages and site components in collaboration with senior analysts to support department-specific needs.</li>
+            <li>Resolved user access, permissions and workflow issues across multiple SharePoint environments.</li>
+            <li>Contributed to documentation and QA during migration cycles and release validations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>Education</h2></div>
+      <div class="head"><span class="org">Augustana College, Rock Island, IL</span><span class="dates">May 2016</span></div>
+      <p style="margin-top:0.5rem;">Bachelor of Arts in Business Administration, cum laude. Concentrations in Management Information Systems and Graphic Design.</p>
+    </section>
+
+    <section>
+      <div class="section-head"><h2>Tools &amp; Technologies</h2></div>
+      <dl class="skills">
+        <dt>AI &amp; Data</dt><dd>Microsoft 365 Copilot, Copilot Studio, Azure AI Foundry, GitHub Copilot, Microsoft Fabric, OneLake, Power BI</dd>
+        <dt>Platforms</dt><dd>Microsoft 365, SharePoint Online, Power Platform, ServiceNow</dd>
+        <dt>Design &amp; Web</dt><dd>Figma, Adobe Creative Suite, HTML, CSS, JavaScript</dd>
+      </dl>
+    </section>
+  </div>
 </main>
+
+<footer>
+  <div class="footer-logo">Garrett<span>.</span>Miner</div>
+  <div>Data &amp; AI Architect &middot; Chicago, IL</div>
+  <div class="footer-links">
+    <a href="https://www.linkedin.com/in/garrett-miner-058b0295/" target="_blank">LinkedIn</a>
+    <a href="mailto:garrettwminer@gmail.com">Email</a>
+  </div>
+</footer>
 </body>
 </html>
